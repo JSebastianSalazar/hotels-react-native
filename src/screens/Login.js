@@ -5,8 +5,7 @@ import {View,
     Text,
     ScrollView,
     StyleSheet,
-    KeyboardAvoidingView,
-    Nex
+    KeyboardAvoidingView
     } from "react-native";
 import InputsField from '../componets/form/Inputs'
 export  default class Login extends  Component{
@@ -27,7 +26,6 @@ export  default class Login extends  Component{
                                      labelSize={14} labelColor={Color.white}  customStyle={{marginBottom: 30}}
                                      borderBotton={Color.white}/>
                     </ScrollView>
-                    <Nex
                 </View>
 
             </KeyboardAvoidingView>
