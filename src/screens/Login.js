@@ -7,12 +7,15 @@ import {View,
     StyleSheet,
     KeyboardAvoidingView
     } from "react-native";
-import InputsField from '../componets/form/Inputs'
+import InputsField from '../componets/form/Inputs';
+import NextArrowBotton from '../componets/buttons/NextArrowBotton';
 export  default class Login extends  Component{
-
+    handledNextBotton() {
+            alert('hola');
+        }
     render() {
         return(
-            <KeyboardAvoidingView style={styles.containerWrapper}>
+            <KeyboardAvoidingView style={styles.containerWrapper} behavior="padding">
                 <View style={styles.scrollViewWrapper}>
                     <ScrollView style={styles.scrollView}>
                         <Text style={styles.loginHeaderText}>
@@ -26,6 +29,9 @@ export  default class Login extends  Component{
                                      labelSize={14} labelColor={Color.white}  customStyle={{marginBottom: 30}}
                                      borderBotton={Color.white}/>
                     </ScrollView>
+                    <View style={styles.nexBotton}>
+                        <NextArrowBotton handledBotton={this.handledNextBotton()}/>
+                    </View>
                 </View>
 
             </KeyboardAvoidingView>
@@ -46,13 +52,18 @@ const styles = StyleSheet.create({
     scrollView: {
         paddingLeft:30,
         paddingRight: 30,
-        paddingTop: 30,
+        paddingTop: 20,
         flex:1
     },
     loginHeaderText:{
-        fontSize: 30,
+        fontSize: 34,
         color: Color.white,
-        fontWeight: '400',
+        fontWeight: '300',
         marginBottom: 40
     },
+    nexBotton:{
+        alignItems: 'flex-end',
+        right: 20,
+        bottom: 20
+    }
 })
