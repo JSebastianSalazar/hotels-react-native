@@ -16,8 +16,9 @@ export  default class Login extends  Component{
     render() {
         return(
             <KeyboardAvoidingView style={styles.containerWrapper} behavior="padding">
+                <ScrollView style={styles.scrollView}>
                 <View style={styles.scrollViewWrapper}>
-                    <ScrollView style={styles.scrollView}>
+
                         <Text style={styles.loginHeaderText}>
                             Log In
                         </Text>
@@ -28,12 +29,12 @@ export  default class Login extends  Component{
                         <InputsField inputType="password" textColors={Color.white} labelText="PASSWORD"
                                      labelSize={14} labelColor={Color.white}  customStyle={{marginBottom: 30}}
                                      borderBotton={Color.white}/>
-                    </ScrollView>
+
                     <View style={styles.nexBotton}>
                         <NextArrowBotton handledBotton={this.handledNextBotton()}/>
                     </View>
                 </View>
-
+                </ScrollView>
             </KeyboardAvoidingView>
         )
     }
